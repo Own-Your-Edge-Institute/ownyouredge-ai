@@ -37,9 +37,9 @@ const HeroSection = () => {
 
   // Stagger text lines
   const lines = [
-    { text: "Lead with", className: "text-foreground" },
-    { text: "AI fluency.", className: "text-gradient-accent italic" },
-    { text: "Own your edge.", className: "text-foreground" },
+    { text: "The AI certification", className: "text-foreground" },
+    { text: "that stays with you", className: "text-gradient-accent italic" },
+    { text: "for life.™", className: "text-foreground" },
   ];
 
   return (
