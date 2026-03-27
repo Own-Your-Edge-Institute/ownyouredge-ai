@@ -21,7 +21,7 @@ const CTASection = () => (
         />
         <div className="relative z-10">
           <h2 className="text-3xl lg:text-5xl font-display font-bold tracking-tight text-primary-foreground mb-6">
-            Ready to own<br /><span className="italic text-gradient-gold">your edge?</span>
+            Ready to own<br /><span className="italic text-gradient-accent">your edge?</span>
           </h2>
           <p className="text-primary-foreground/60 max-w-md mx-auto mb-10 text-lg font-light">
             Join thousands of professionals and organizations building AI fluency that matters.
