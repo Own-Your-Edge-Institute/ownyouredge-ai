@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navItems = ["Courses", "For Business", "AI Leaders", "About"];
 
@@ -11,8 +12,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
       <div className="container flex items-center justify-between h-16">
-        <a href="/" className="font-display text-xl font-bold tracking-tight">
-          Own Your Edge<span className="text-gold">™</span>
+        <a href="/">
+          <img src={logo} alt="Own Your Edge™ Institute" className="h-10" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
