@@ -66,7 +66,7 @@ const HeroSection = () => {
           >
             <span className="text-primary-foreground">Lead with</span>
             <br />
-            <span className="text-gradient-gold italic">AI fluency.</span>
+            <span className="text-gradient-accent italic">AI fluency.</span>
             <br />
             <span className="text-primary-foreground">Own your edge.</span>
           </motion.h1>
