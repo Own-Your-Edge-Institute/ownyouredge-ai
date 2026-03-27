@@ -1,131 +1,164 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import certificateBadge from "@/assets/certificate-badge.png";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
-  const springX = useSpring(mouseX, { stiffness: 50, damping: 20 });
-  const springY = useSpring(mouseY, { stiffness: 50, damping: 20 });
+  const springX = useSpring(mouseX, { stiffness: 40, damping: 25 });
+  const springY = useSpring(mouseY, { stiffness: 40, damping: 25 });
 
-  const badgeOpacity = useTransform(springY, [0.8, 0.3], [0, 1]);
-  const badgeScale = useTransform(springY, [0.8, 0.3], [0.8, 1]);
-  const badgeRotateY = useTransform(springX, [0, 1], [-15, 15]);
-  const badgeRotateX = useTransform(springY, [0, 1], [15, -15]);
+  // Badge reveals as mouse enters the right half
+  const badgeOpacity = useTransform(springX, [0.3, 0.6], [0, 1]);
+  const badgeScale = useTransform(springX, [0.3, 0.7], [0.85, 1]);
+  const badgeRotateY = useTransform(springX, [0, 1], [-8, 8]);
+  const badgeRotateX = useTransform(springY, [0, 1], [8, -8]);
+
+  // Orb follows mouse
+  const orbX = useTransform(springX, [0, 1], ["-20%", "80%"]);
+  const orbY = useTransform(springY, [0, 1], ["-20%", "80%"]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     mouseX.set((e.clientX - rect.left) / rect.width);
     mouseY.set((e.clientY - rect.top) / rect.height);
+    if (!hasInteracted) setHasInteracted(true);
   };
 
   const handleMouseLeave = () => {
     mouseX.set(0.5);
-    mouseY.set(0.8);
+    mouseY.set(0.5);
   };
+
+  // Stagger text lines
+  const lines = [
+    { text: "Lead with", className: "text-foreground" },
+    { text: "AI fluency.", className: "text-gradient-accent italic" },
+    { text: "Own your edge.", className: "text-foreground" },
+  ];
 
   return (
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
-      style={{ background: "var(--hero-gradient)" }}
+      className="relative min-h-screen flex items-end pb-20 lg:pb-32 overflow-hidden cursor-crosshair"
     >
-      {/* Subtle grid overlay */}
+      {/* Animated background orb */}
+      <motion.div
+        style={{ left: orbX, top: orbY }}
+        className="absolute w-[600px] h-[600px] rounded-full glow-orb pointer-events-none animate-pulse-glow"
+      />
+
+      {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: "linear-gradient(hsl(0 0% 100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+          backgroundImage: "linear-gradient(hsl(240 10% 95%) 1px, transparent 1px), linear-gradient(90deg, hsl(240 10% 95%) 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
         }}
       />
 
-      <div className="container relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 py-20">
-        {/* Text */}
-        <div className="flex-1 text-center lg:text-left">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-sm font-medium tracking-[0.2em] uppercase text-gold mb-6"
-          >
-            Own Your Edge™ Institute
-          </motion.p>
+      {/* Top decorative line */}
+      <div className="absolute top-[35%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight"
-          >
-            <span className="text-primary-foreground">Lead with</span>
-            <br />
-            <span className="text-gradient-accent italic">AI fluency.</span>
-            <br />
-            <span className="text-primary-foreground">Own your edge.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="mt-8 text-lg text-primary-foreground/60 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed"
-          >
-            The certified AI fluency program for professionals and organizations ready to lead the future — not follow it.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-          >
-            <Button className="bg-gold text-accent-foreground hover:bg-gold/90 rounded-full px-8 h-12 text-base font-semibold gap-2">
-              Get Certified <ArrowRight size={18} />
-            </Button>
-            <Button variant="outline" className="rounded-full px-8 h-12 text-base border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              For Business
-            </Button>
-          </motion.div>
-        </div>
-
-        {/* Certificate reveal */}
-        <div className="flex-1 flex items-center justify-center perspective-[1000px]">
-          <motion.div
-            style={{
-              opacity: badgeOpacity,
-              scale: badgeScale,
-              rotateY: badgeRotateY,
-              rotateX: badgeRotateX,
-            }}
-            className="relative"
-          >
-            <div className="absolute -inset-10 bg-gold/10 rounded-full blur-3xl" />
-            <img
-              src={certificateBadge}
-              alt="Professional AI Certification Badge"
-              width={400}
-              height={300}
-              className="relative drop-shadow-2xl"
-            />
+      <div className="container relative z-10">
+        <div className="grid lg:grid-cols-12 gap-8 items-end">
+          {/* Left: Text */}
+          <div className="lg:col-span-7">
             <motion.p
-              style={{ opacity: badgeOpacity }}
-              className="text-center mt-6 text-primary-foreground/50 text-sm font-medium tracking-wide"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 1 }}
+              className="text-xs font-medium tracking-[0.3em] uppercase text-primary mb-8"
             >
-              Move your cursor to reveal
+              Professional AI Certification
             </motion.p>
-          </motion.div>
+
+            <div className="space-y-0">
+              {lines.map((line, i) => (
+                <div key={i} className="overflow-hidden">
+                  <motion.h1
+                    initial={{ y: 120 }}
+                    animate={{ y: 0 }}
+                    transition={{
+                      delay: 1 + i * 0.15,
+                      duration: 1,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.95] tracking-[-0.02em] ${line.className}`}
+                  >
+                    {line.text}
+                  </motion.h1>
+                </div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+              className="mt-12 flex flex-col sm:flex-row items-start gap-6"
+            >
+              <p className="text-muted-foreground max-w-sm text-base leading-relaxed">
+                The certified AI fluency program for professionals and organizations ready to lead — not follow.
+              </p>
+              <div className="flex gap-3">
+                <a
+                  href="#get-certified"
+                  className="group flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-primary/80 transition-all"
+                >
+                  Start Now
+                  <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+                <a
+                  href="#programs"
+                  className="flex items-center px-7 py-3.5 rounded-full text-sm font-medium border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
+                >
+                  Explore
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right: Certificate reveal */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end" style={{ perspective: "1200px" }}>
+            <motion.div
+              style={{
+                opacity: badgeOpacity,
+                scale: badgeScale,
+                rotateY: badgeRotateY,
+                rotateX: badgeRotateX,
+              }}
+              className="relative"
+            >
+              {/* Glow behind badge */}
+              <div className="absolute -inset-16 rounded-full bg-primary/10 blur-3xl animate-pulse-glow" />
+              <img
+                src={certificateBadge}
+                alt="Professional AI Certification Achieved"
+                width={380}
+                height={284}
+                className="relative drop-shadow-[0_0_60px_hsl(255_55%_62%_/_0.3)]"
+              />
+            </motion.div>
+            {/* Hint text */}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: hasInteracted ? 0 : 0.4 }}
+              transition={{ delay: 3 }}
+              className="absolute bottom-4 right-8 text-xs text-muted-foreground hidden lg:block"
+            >
+              ← move cursor to reveal
+            </motion.span>
+          </div>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

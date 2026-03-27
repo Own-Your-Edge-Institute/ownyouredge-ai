@@ -1,43 +1,53 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: "01", title: "Explore Paths", desc: "Choose between individual certification or a team/enterprise workforce program." },
-  { num: "02", title: "Learn & Apply", desc: "Complete curated AI fluency modules designed by industry leaders and practitioners." },
-  { num: "03", title: "Evaluate & Earn", desc: "Pass the assessment and earn your verified Professional AI Certification credential." },
-  { num: "04", title: "Amplify Impact", desc: "Use your certification to lead projects, influence strategy, and advance your career." },
+  { title: "Choose your path", desc: "Individual certification or enterprise workforce program — built for how you learn." },
+  { title: "Learn from leaders", desc: "Curated AI fluency modules designed by practitioners who've done it, not just taught it." },
+  { title: "Earn your credential", desc: "Pass the assessment. Receive your verified Professional AI Certification." },
+  { title: "Lead with proof", desc: "Use your certification to land roles, win clients, and drive organizational change." },
 ];
 
 const PathwaySection = () => (
-  <section className="py-24 lg:py-32 bg-secondary/50">
-    <div className="container">
+  <section className="py-24 lg:py-40 relative overflow-hidden">
+    {/* Large background text */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+      <span className="text-[15vw] font-display font-bold text-foreground/[0.02] whitespace-nowrap">
+        CERTIFY
+      </span>
+    </div>
+
+    <div className="container relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center max-w-2xl mx-auto mb-16"
+        className="max-w-xl mb-20"
       >
-        <p className="text-sm font-medium tracking-[0.2em] uppercase text-gold mb-4">Your Pathway</p>
-        <h2 className="text-3xl lg:text-5xl font-display font-bold tracking-tight">
-          Four steps to<br /><span className="italic">certified confidence</span>
+        <p className="text-xs font-medium tracking-[0.3em] uppercase text-primary mb-4">The Process</p>
+        <h2 className="text-4xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight">
+          Four steps.<br />
+          <span className="italic text-gradient-accent">Zero ambiguity.</span>
         </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/30 rounded-2xl overflow-hidden">
         {steps.map((s, i) => (
           <motion.div
-            key={s.num}
-            initial={{ opacity: 0, y: 30 }}
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.12 }}
-            className="relative"
+            transition={{ delay: i * 0.12, duration: 0.7 }}
+            className="bg-background p-8 lg:p-10 group hover:bg-card transition-colors duration-500 relative"
           >
-            <span className="text-6xl font-display font-bold text-gold/15">{s.num}</span>
-            <h3 className="font-display text-xl font-semibold mt-2 mb-3">{s.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-            {i < steps.length - 1 && (
-              <div className="hidden lg:block absolute top-8 -right-4 w-8 border-t border-dashed border-border" />
-            )}
+            <span className="text-7xl font-display font-bold text-foreground/[0.04] absolute top-4 right-4">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div className="relative">
+              <div className="w-2 h-2 rounded-full bg-primary mb-8 group-hover:scale-150 transition-transform" />
+              <h3 className="font-display text-xl font-semibold mb-4">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+            </div>
           </motion.div>
         ))}
       </div>
