@@ -1,18 +1,18 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import StatsBar from "@/components/StatsBar";
-import WhySection from "@/components/WhySection";
-import PathwaySection from "@/components/PathwaySection";
+import MarqueeBanner from "@/components/MarqueeBanner";
+import ValueSection from "@/components/ValueSection";
+import ProcessSection from "@/components/ProcessSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-background text-foreground">
     <Navbar />
     <HeroSection />
-    <StatsBar />
-    <WhySection />
-    <PathwaySection />
+    <MarqueeBanner />
+    <ValueSection />
+    <ProcessSection />
     <CTASection />
     <Footer />
   </div>

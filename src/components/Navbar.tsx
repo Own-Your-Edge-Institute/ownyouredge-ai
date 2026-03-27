@@ -1,71 +1,63 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
-
-const navItems = ["Programs", "For Business", "About"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <motion.nav
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 1 }}
+      className="fixed top-0 left-0 right-0 z-50 mix-blend-difference"
     >
-      <div className="mx-4 mt-4 rounded-2xl glass-panel px-6 py-3">
-        <div className="flex items-center justify-between">
-          <a href="/">
-            <img src={logo} alt="Own Your Edge™ Institute" className="h-8" />
-          </a>
+      <div className="px-6 lg:px-12 py-6 flex items-center justify-between">
+        <a href="/">
+          <img src={logo} alt="Own Your Edge™ Institute" className="h-8 brightness-200" />
+        </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-                className="text-xs font-medium tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {item}
-              </a>
-            ))}
+        <div className="hidden md:flex items-center gap-10">
+          {["Programs", "Business", "About"].map((item) => (
             <a
-              href="#get-certified"
-              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase bg-primary text-primary-foreground px-5 py-2.5 rounded-full hover:bg-primary/80 transition-colors"
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors duration-500"
             >
-              Get Certified <ArrowUpRight size={14} />
+              {item}
             </a>
-          </div>
-
-          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          ))}
+          <a
+            href="#certify"
+            className="text-[11px] font-medium tracking-[0.25em] uppercase text-white border border-white/20 px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-500"
+          >
+            Get Certified
+          </a>
         </div>
 
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="md:hidden overflow-hidden"
-            >
-              <div className="pt-4 pb-2 flex flex-col gap-4 border-t border-border/30 mt-3">
-                {navItems.map((item) => (
-                  <a key={item} href={`#${item.toLowerCase().replace(/\s/g, "-")}`} className="text-sm text-muted-foreground">
-                    {item}
-                  </a>
-                ))}
-                <a href="#get-certified" className="text-sm font-semibold text-primary">
-                  Get Certified →
-                </a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
       </div>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border overflow-hidden"
+          >
+            <div className="px-6 py-6 flex flex-col gap-5">
+              {["Programs", "Business", "About"].map((item) => (
+                <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-foreground/70">{item}</a>
+              ))}
+              <a href="#certify" className="text-sm font-medium text-primary">Get Certified →</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
