@@ -97,9 +97,9 @@
 }
 
 @layer utilities {
-  .text-gradient-gold {
+  .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(39 90% 52%), hsl(39 80% 65%), hsl(39 90% 52%));
+    background-image: linear-gradient(135deg, hsl(255 60% 65%), hsl(255 70% 80%), hsl(255 60% 65%));
   }
 
   .glass-card {
