@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 250 20% 3%;
-    --foreground: 0 0% 93%;
+    --background: 0 0% 100%;
+    --foreground: 263 40% 25%;
 
-    --card: 250 15% 6%;
-    --card-foreground: 0 0% 93%;
+    --card: 270 30% 98%;
+    --card-foreground: 263 40% 25%;
 
-    --popover: 250 15% 6%;
-    --popover-foreground: 0 0% 93%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 263 40% 25%;
 
-    --primary: 262 50% 58%;
+    --primary: 263 45% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 250 12% 10%;
-    --secondary-foreground: 0 0% 80%;
+    --secondary: 270 20% 95%;
+    --secondary-foreground: 263 40% 25%;
 
-    --muted: 250 10% 12%;
-    --muted-foreground: 250 8% 45%;
+    --muted: 270 15% 94%;
+    --muted-foreground: 263 15% 50%;
 
-    --accent: 262 50% 58%;
+    --accent: 263 45% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 250 12% 12%;
-    --input: 250 12% 12%;
-    --ring: 262 50% 58%;
+    --border: 270 15% 90%;
+    --input: 270 15% 90%;
+    --ring: 263 45% 55%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 250 20% 4%;
-    --sidebar-foreground: 0 0% 93%;
-    --sidebar-primary: 262 50% 58%;
+    --sidebar-background: 270 20% 98%;
+    --sidebar-foreground: 263 40% 25%;
+    --sidebar-primary: 263 45% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 250 12% 10%;
-    --sidebar-accent-foreground: 0 0% 93%;
-    --sidebar-border: 250 12% 12%;
-    --sidebar-ring: 262 50% 58%;
+    --sidebar-accent: 270 20% 95%;
+    --sidebar-accent-foreground: 263 40% 25%;
+    --sidebar-border: 270 15% 90%;
+    --sidebar-ring: 263 45% 55%;
   }
 }
 
@@ -58,7 +58,7 @@
   }
 
   ::selection {
-    background: hsl(262 50% 58% / 0.3);
+    background: hsl(263 45% 55% / 0.15);
   }
 }
 
@@ -68,10 +68,10 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 80px hsl(262 50% 58% / 0.4);
+    text-shadow: 0 0 80px hsl(263 45% 55% / 0.25);
   }
 
   .border-glow {
-    box-shadow: 0 0 0 1px hsl(262 50% 58% / 0.15), 0 0 40px -10px hsl(262 50% 58% / 0.2);
+    box-shadow: 0 0 0 1px hsl(263 45% 55% / 0.1), 0 0 40px -10px hsl(263 45% 55% / 0.1);
   }
 }
