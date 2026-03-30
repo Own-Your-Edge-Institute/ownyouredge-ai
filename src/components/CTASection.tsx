@@ -28,7 +28,7 @@ const CTASection = () => (
             >
               Ready to own
               <br />
-              <span className="italic text-primary text-glow">your edge?</span>
+              <span className="italic text-primary text-glow">your edge™?</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
