@@ -26,9 +26,7 @@ const CTASection = () => (
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-4xl lg:text-6xl font-serif leading-[1.05] mt-4 mb-6"
             >
-              Ready to own
-              <br />
-              <span className="italic text-primary text-glow">your edge™?</span>
+              Ready to <span className="italic text-primary text-glow">own your edge™</span>?
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
