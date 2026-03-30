@@ -35,7 +35,7 @@ const CTASection = () => (
               transition={{ delay: 0.3 }}
               className="text-muted-foreground text-base leading-relaxed mb-10 max-w-md"
             >
-              Join the professionals and organizations building AI fluency that translates into real-world leadership.
+              Whether you're a professional proving capability or a company building AI-ready teams — there's a path built for you.
             </motion.p>
 
             <motion.div
@@ -45,17 +45,17 @@ const CTASection = () => (
               transition={{ delay: 0.4 }}
               className="flex flex-col gap-3"
             >
-              <a href="#" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-4 rounded-2xl hover:shadow-[0_0_40px_hsl(263_45%_55%_/_0.25)] transition-all duration-500">
+              <a href="#" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-5 rounded-2xl hover:shadow-[0_0_40px_hsl(263_45%_55%_/_0.25)] transition-all duration-500">
                 <div>
-                  <p className="font-medium">Individual Certification</p>
-                  <p className="text-xs opacity-70 mt-0.5">Start your AI fluency journey today</p>
+                  <p className="font-medium text-base">Individual Certification</p>
+                  <p className="text-xs opacity-70 mt-1">Standard + Executive Track available</p>
                 </div>
                 <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
               </a>
-              <a href="#" className="group flex items-center justify-between border border-border px-8 py-4 rounded-2xl hover:border-primary/30 hover:bg-secondary/50 transition-all duration-500">
+              <a href="#" className="group flex items-center justify-between border border-border px-8 py-5 rounded-2xl hover:border-primary/30 hover:bg-secondary/50 transition-all duration-500">
                 <div>
-                  <p className="font-medium text-foreground">Enterprise & Teams</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Scale AI readiness across your organization</p>
+                  <p className="font-medium text-foreground text-base">Enterprise Program</p>
+                  <p className="text-xs text-muted-foreground mt-1">Team training + Executive Layer</p>
                 </div>
                 <span className="text-xl text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all">→</span>
               </a>
