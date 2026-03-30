@@ -50,14 +50,14 @@ const CTASection = () => (
               <a href="#" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-4 rounded-2xl hover:shadow-[0_0_40px_hsl(262_50%_58%_/_0.3)] transition-all duration-500">
                 <div>
                   <p className="font-medium">Individual Certification</p>
-                  <p className="text-xs opacity-60 mt-0.5">Start your AI fluency journey today</p>
+                  <p className="text-xs opacity-60 mt-0.5">Standard + Executive Track</p>
                 </div>
                 <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
               </a>
               <a href="#" className="group flex items-center justify-between border border-border/50 px-8 py-4 rounded-2xl hover:border-primary/30 hover:bg-card/50 transition-all duration-500">
                 <div>
-                  <p className="font-medium">Enterprise & Teams</p>
-                  <p className="text-xs text-foreground/40 mt-0.5">Scale AI readiness across your organization</p>
+                  <p className="font-medium">Enterprise Program</p>
+                  <p className="text-xs text-foreground/40 mt-0.5">Team Program + Executive Layer</p>
                 </div>
                 <span className="text-xl text-foreground/30 group-hover:text-foreground group-hover:translate-x-1 transition-all">→</span>
               </a>
