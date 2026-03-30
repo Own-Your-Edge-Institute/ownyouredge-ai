@@ -34,41 +34,93 @@ const ValueSection = () => {
           <motion.div style={{ width: lineWidth }} className="absolute top-0 left-0 h-px bg-gradient-to-r from-primary via-primary/50 to-transparent" />
         </div>
 
-        {/* Value propositions as stacked reveals */}
-        <div className="space-y-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-px">
-          {[
-            {
-              title: "For Professionals",
-              desc: "Prove you can do more than talk about AI. Earn a credential that signals strategic capability — not just awareness.",
-              detail: "Individual Certification",
-            },
-            {
-              title: "For Organizations",
-              desc: "Upskill entire teams with a structured program. Measure readiness. Build an AI-fluent workforce from the inside out.",
-              detail: "Enterprise Program",
-            },
-            {
-              title: "For Leaders",
-              desc: "Set the standard for your industry. Lead with confidence, backed by a certification that commands respect.",
-              detail: "Executive Track",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.7 }}
-              className="group lg:p-10 lg:border-l lg:first:border-l-0 border-border/30 hover:bg-card/50 transition-colors duration-700"
-            >
-              <span className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium">{item.detail}</span>
-              <h3 className="text-2xl font-serif mt-3 mb-4 group-hover:text-primary transition-colors duration-500">{item.title}</h3>
-              <p className="text-foreground/40 text-sm leading-relaxed">{item.desc}</p>
-              <a href="#certify" className="inline-block mt-6 text-xs tracking-widest uppercase text-foreground/30 group-hover:text-primary transition-colors duration-500">
-                Learn more →
-              </a>
-            </motion.div>
-          ))}
+        {/* Two-lane program structure */}
+        <div className="grid lg:grid-cols-2 gap-6">
+          {/* Lane 1: Individual Certification */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="rounded-[1.5rem] border border-border/30 p-8 lg:p-10 hover:border-primary/20 transition-colors duration-700"
+          >
+            <span className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium">Lane 01</span>
+            <h3 className="text-2xl lg:text-3xl font-serif mt-3 mb-2">Individual Certification</h3>
+            <p className="text-foreground/40 text-sm leading-relaxed mb-8">
+              Prove you can do more than talk about AI. Earn a credential that signals strategic capability — not just awareness.
+            </p>
+
+            <div className="space-y-4">
+              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Track</span>
+                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Standard</h4>
+                  </div>
+                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
+                </div>
+                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
+                  Core AI fluency certification for professionals ready to lead with confidence.
+                </p>
+              </div>
+
+              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Upgrade</span>
+                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Executive Track</h4>
+                  </div>
+                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
+                </div>
+                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
+                  Leadership-level application and strategic decision-making for senior professionals.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Lane 2: Enterprise Program */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15, duration: 0.7 }}
+            className="rounded-[1.5rem] border border-border/30 p-8 lg:p-10 hover:border-primary/20 transition-colors duration-700"
+          >
+            <span className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium">Lane 02</span>
+            <h3 className="text-2xl lg:text-3xl font-serif mt-3 mb-2">Enterprise Program</h3>
+            <p className="text-foreground/40 text-sm leading-relaxed mb-8">
+              Scale AI readiness across your organization with structured training, measurement, and leadership alignment.
+            </p>
+
+            <div className="space-y-4">
+              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Program</span>
+                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Team Program</h4>
+                  </div>
+                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
+                </div>
+                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
+                  Upskill entire teams with structured training and AI systems adoption.
+                </p>
+              </div>
+
+              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Add-on</span>
+                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Executive Layer</h4>
+                  </div>
+                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
+                </div>
+                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
+                  Leadership briefings and decision architecture for C-suite and senior executives.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
