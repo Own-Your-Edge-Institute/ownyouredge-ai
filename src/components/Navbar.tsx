@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -11,11 +10,11 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 1 }}
-      className="fixed top-0 left-0 right-0 z-50 mix-blend-difference"
+      className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="px-6 lg:px-12 py-6 flex items-center justify-between">
-        <a href="/">
-          <img src={logo} alt="Own Your Edge™ Institute" className="h-8 brightness-200" />
+        <a href="/" className="text-sm font-semibold tracking-[0.15em] uppercase text-foreground">
+          Own Your Edge™
         </a>
 
         <div className="hidden md:flex items-center gap-10">
@@ -23,20 +22,20 @@ const Navbar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors duration-500"
+              className="text-[11px] font-medium tracking-[0.25em] uppercase text-foreground/50 hover:text-foreground transition-colors duration-500"
             >
               {item}
             </a>
           ))}
           <a
             href="#certify"
-            className="text-[11px] font-medium tracking-[0.25em] uppercase text-white border border-white/20 px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-500"
+            className="text-[11px] font-medium tracking-[0.25em] uppercase text-primary-foreground bg-primary px-5 py-2 rounded-full hover:opacity-90 transition-all duration-500"
           >
             Get Certified
           </a>
         </div>
 
-        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
@@ -51,7 +50,7 @@ const Navbar = () => {
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {["Programs", "Business", "About"].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-foreground/70">{item}</a>
+                <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-foreground/60">{item}</a>
               ))}
               <a href="#certify" className="text-sm font-medium text-primary">Get Certified →</a>
             </div>
