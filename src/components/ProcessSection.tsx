@@ -27,9 +27,7 @@ const ProcessSection = () => (
             transition={{ duration: 0.8 }}
             className="text-3xl lg:text-5xl font-serif leading-[1.1]"
           >
-            Four steps.
-            <br />
-            <span className="italic text-primary">No ambiguity.</span>
+            <span className="italic text-primary">Own Your Edge™</span> in four steps.
           </motion.h2>
         </div>
       </div>
