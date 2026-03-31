@@ -4,6 +4,7 @@ import MarqueeBanner from "@/components/MarqueeBanner";
 import ValueSection from "@/components/ValueSection";
 import FounderSection from "@/components/FounderSection";
 import ProcessSection from "@/components/ProcessSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
