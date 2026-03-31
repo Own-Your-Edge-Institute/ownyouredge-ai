@@ -77,7 +77,7 @@ const ValueSection = () => {
             </p>
 
             <div className="space-y-3 mb-8">
-              <p className="text-foreground/30 text-xs">Team Program · Executive Layer · Strategic Advisory</p>
+              <p className="text-foreground/40 text-xs">Team Program · Executive Layer · Strategic Advisory</p>
             </div>
 
             <a
