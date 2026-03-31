@@ -94,7 +94,7 @@ const HeroSection = () => {
             className="mt-12"
           >
             <a href="#certify" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full text-sm font-medium hover:shadow-[0_0_30px_hsl(var(--primary)_/_0.4)] transition-shadow duration-500">
-              Begin Certification →
+              Explore Certification →
             </a>
           </motion.div>
 
