@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { title: "Choose your path", desc: "Individual or enterprise. We meet you exactly where you are." },
-  { title: "Learn from practitioners", desc: "Modules built by people who've deployed AI — not just studied it." },
-  { title: "Earn your credential", desc: "Pass the assessment. Receive your verified certification." },
-  { title: "Lead with proof", desc: "Your certification speaks before you do. Carry it for life." },
+  { title: "Choose your path", desc: "Individual or team. Standard track or Executive. You pick the level; we build from there." },
+  { title: "Learn from practitioners", desc: "Every module built by people who've actually deployed AI at scale — not academics who studied it from the outside." },
+  { title: "Earn your credential", desc: "Pass the assessment. Receive your verified certification, ready to display on LinkedIn and share with hiring teams." },
+  { title: "Lead with proof", desc: "Your certification signals strategic capability before you say a word. Carry it for life — no renewal fees, ever." },
 ];
 
 const ProcessSection = () => (
@@ -56,6 +56,21 @@ const ProcessSection = () => (
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="flex justify-center mt-12"
+      >
+        <a
+          href="#certify"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500"
+        >
+          Begin Certification →
+        </a>
+      </motion.div>
     </div>
   </section>
 );
