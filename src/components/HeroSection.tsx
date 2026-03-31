@@ -75,7 +75,7 @@ const HeroSection = () => {
               initial={{ y: 120 }}
               animate={{ y: 0 }}
               transition={{ delay: 0.7, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[clamp(2.5rem,8vw,7rem)] font-serif leading-[0.95] tracking-[-0.02em] max-w-4xl"
+              className="text-[clamp(2rem,8vw,7rem)] font-serif leading-[0.95] tracking-[-0.02em] max-w-4xl"
             >
               The AI certification
               <br />

@@ -51,9 +51,11 @@ const Navbar = () => {
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {["Programs", "Business", "About"].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-foreground/70">{item}</a>
+                <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setOpen(false)} className="text-sm text-foreground/70">{item}</a>
               ))}
-              <a href="#certify" className="text-sm font-medium text-primary">Get Certified →</a>
+              <a href="#certify" onClick={() => setOpen(false)} className="inline-flex items-center justify-center bg-primary text-primary-foreground text-sm font-medium px-5 py-2.5 rounded-full">
+                Get Certified →
+              </a>
             </div>
           </motion.div>
         )}
