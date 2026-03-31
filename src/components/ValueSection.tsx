@@ -72,7 +72,7 @@ const ValueSection = () => {
           >
             <span className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium">Lane 02</span>
             <h3 className="text-2xl lg:text-3xl font-serif mt-3 mb-2">Enterprise Program</h3>
-            <p className="text-foreground/40 text-sm leading-relaxed mb-8">
+            <p className="text-foreground/50 text-sm leading-relaxed mb-8">
               Scale AI readiness across your organization with structured training, measurement, and leadership alignment.
             </p>
 
