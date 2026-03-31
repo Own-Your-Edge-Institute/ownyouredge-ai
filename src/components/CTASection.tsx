@@ -52,13 +52,27 @@ const CTASection = () => (
                 </div>
                 <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
               </a>
-              <a href="#" className="group flex items-center justify-between border border-border/50 px-8 py-4 rounded-2xl hover:border-primary/30 hover:bg-card/50 transition-all duration-500">
-                <div>
-                  <p className="font-medium">Enterprise Program</p>
-                  <p className="text-xs text-foreground/40 mt-0.5">Team Program + Executive Layer</p>
+              <div className="rounded-2xl border border-primary/30 p-8 hover:border-primary/50 transition-all duration-500">
+                <div className="mb-4">
+                  <p className="font-serif text-xl font-medium">Enterprise Program</p>
+                  <p className="text-xs text-primary mt-1 tracking-wide">Team Program + Executive Layer</p>
                 </div>
-                <span className="text-xl text-foreground/30 group-hover:text-foreground group-hover:translate-x-1 transition-all">→</span>
-              </a>
+                <p className="text-sm text-foreground/50 leading-relaxed mb-3">
+                  A certification framework your organization can build on, department by department, year over year.
+                </p>
+                <p className="text-xs text-foreground/35 leading-relaxed mb-4">
+                  Every enterprise deployment is scoped to your teams, your tools, and your goals. You get a certification program, not a course link. License it once. Run it internally as many times as you need.
+                </p>
+                <p className="text-xs text-primary/80 leading-relaxed mb-6 italic">
+                  Includes Own Your Edge™ Strategic Advisory — direct access to Astrid for quarterly strategy sessions as the landscape shifts.
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 border border-primary text-foreground px-6 py-3 rounded-xl text-sm font-medium hover:bg-primary/10 transition-all duration-500"
+                >
+                  Schedule a conversation →
+                </a>
+              </div>
             </motion.div>
           </div>
 
