@@ -15,7 +15,7 @@ const testimonials = [
 const TestimonialsSection = () => (
   <section className="py-32 lg:py-48 px-6 lg:px-12">
     <div className="max-w-[1400px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[960px] mx-auto">
         {testimonials.map((t, i) => (
           <motion.div
             key={i}
