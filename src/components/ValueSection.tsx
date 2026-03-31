@@ -22,9 +22,9 @@ const ValueSection = () => {
               transition={{ duration: 0.8 }}
               className="text-3xl lg:text-5xl font-serif leading-[1.1]"
             >
-              AI literacy is table stakes.
+              Anyone can use AI.
               <br />
-              <span className="italic text-primary">AI fluency is the edge.</span>
+              <span className="italic text-primary">Few can lead with it.</span>
             </motion.h2>
           </div>
         </div>
