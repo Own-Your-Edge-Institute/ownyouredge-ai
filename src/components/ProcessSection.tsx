@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { title: "Choose your path", desc: "Individual or enterprise. We meet you exactly where you are." },
-  { title: "Learn from practitioners", desc: "Modules built by people who've deployed AI — not just studied it." },
-  { title: "Earn your credential", desc: "Pass the assessment. Receive your verified certification." },
-  { title: "Lead with proof", desc: "Your certification speaks before you do. Carry it for life." },
+  { title: "Choose your path", desc: "Individual or team. Standard track or Executive. You pick the level; we build from there." },
+  { title: "Learn from practitioners", desc: "Every module built by people who've actually deployed AI at scale — not academics who studied it from the outside." },
+  { title: "Earn your credential", desc: "Pass the assessment. Receive your verified certification, ready to display on LinkedIn and share with hiring teams." },
+  { title: "Lead with proof", desc: "Your certification signals strategic capability before you say a word. Carry it for life — no renewal fees, ever." },
 ];
 
 const ProcessSection = () => (
