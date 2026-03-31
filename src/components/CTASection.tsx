@@ -35,7 +35,7 @@ const CTASection = () => (
               transition={{ delay: 0.3 }}
               className="text-foreground/40 text-base leading-relaxed mb-10 max-w-md"
             >
-              Join the professionals and organizations building AI fluency that translates into real-world leadership.
+              Join the professionals and organizations mastering AI and transforming real-world leadership.
             </motion.p>
 
             <motion.div
@@ -45,34 +45,20 @@ const CTASection = () => (
               transition={{ delay: 0.4 }}
               className="flex flex-col gap-3"
             >
-              <a href="#" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-4 rounded-2xl hover:shadow-[0_0_40px_hsl(262_50%_58%_/_0.3)] transition-all duration-500">
+              <a href="#" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-6 rounded-2xl hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500">
                 <div>
                   <p className="font-medium">Individual Certification</p>
                   <p className="text-xs opacity-60 mt-0.5">Standard + Executive Track</p>
                 </div>
                 <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
               </a>
-              <div className="rounded-2xl border border-primary/30 p-8 hover:border-primary/50 transition-all duration-500">
-                <div className="mb-4">
-                  <p className="font-serif text-xl font-medium">Enterprise Program</p>
-                  <p className="text-xs text-primary mt-1 tracking-wide">Team Program + Executive Layer</p>
+              <a href="#" className="group flex items-center justify-between rounded-2xl border border-primary/40 px-8 py-6 hover:border-primary/60 hover:bg-primary/5 transition-all duration-500">
+                <div>
+                  <p className="font-medium">Enterprise Program</p>
+                  <p className="text-xs text-primary mt-0.5">Team Program + Executive Layer + Strategic Advisory</p>
                 </div>
-                <p className="text-sm text-foreground/50 leading-relaxed mb-3">
-                  A certification framework your organization can build on, department by department, year over year.
-                </p>
-                <p className="text-xs text-foreground/35 leading-relaxed mb-4">
-                  Every enterprise deployment is scoped to your teams, your tools, and your goals. You get a certification program, not a course link. License it once. Run it internally as many times as you need.
-                </p>
-                <p className="text-xs text-primary/80 leading-relaxed mb-6 italic">
-                  Includes Own Your Edge™ Strategic Advisory — direct access to Astrid for quarterly strategy sessions as the landscape shifts.
-                </p>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 border border-primary text-foreground px-6 py-3 rounded-xl text-sm font-medium hover:bg-primary/10 transition-all duration-500"
-                >
-                  Schedule a conversation →
-                </a>
-              </div>
+                <span className="text-xl text-primary group-hover:translate-x-1 transition-transform">→</span>
+              </a>
             </motion.div>
           </div>
 
