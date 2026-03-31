@@ -62,6 +62,9 @@ const ValueSection = () => {
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Core AI fluency certification for professionals ready to lead with confidence.
                 </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: confidently lead AI initiatives, evaluate tools, and prompt with precision.
+                </p>
               </div>
 
               <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
