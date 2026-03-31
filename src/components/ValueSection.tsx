@@ -51,7 +51,7 @@ const ValueSection = () => {
             </p>
 
             <div className="space-y-3 mb-8">
-              <p className="text-foreground/30 text-xs">Standard Track · Executive Track</p>
+              <p className="text-foreground/40 text-xs">Standard Track · Executive Track</p>
             </div>
 
             <a
