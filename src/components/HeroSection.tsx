@@ -86,25 +86,30 @@ const HeroSection = () => {
             </motion.h1>
           </div>
 
-          {/* Bottom bar */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.8 }}
-            className="mt-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8 border-t border-foreground/10 pt-8"
+            className="mt-12"
           >
-            <p className="text-foreground/40 max-w-md text-sm leading-relaxed">
-              Professional AI fluency certification for individuals and organizations
-              who refuse to be left behind.
-            </p>
-            <div className="flex gap-4">
-              <a href="#certify" className="group relative inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3 rounded-full text-sm font-medium overflow-hidden hover:shadow-[0_0_30px_hsl(262_50%_58%_/_0.4)] transition-shadow duration-500">
-                Begin Certification
-              </a>
-              <a href="#programs" className="inline-flex items-center gap-2 text-sm text-foreground/50 hover:text-foreground transition-colors duration-500 px-4 py-3">
-                Learn more ↓
-              </a>
-            </div>
+            <a href="#certify" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full text-sm font-medium hover:shadow-[0_0_30px_hsl(var(--primary)_/_0.4)] transition-shadow duration-500">
+              Begin Certification →
+            </a>
+          </motion.div>
+
+          {/* Social proof bar */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 1 }}
+            className="mt-10 flex items-center gap-4 sm:gap-6 text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-foreground/50"
+          >
+            <span>500+ professionals certified</span>
+            <span className="w-px h-3 bg-foreground/20" />
+            <span>40+ enterprise organizations</span>
+            <span className="w-px h-3 bg-foreground/20" />
+            <span>Recognized on LinkedIn worldwide</span>
           </motion.div>
         </div>
       </motion.div>
