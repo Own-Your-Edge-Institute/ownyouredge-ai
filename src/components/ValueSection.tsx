@@ -62,6 +62,9 @@ const ValueSection = () => {
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Core AI fluency certification for professionals ready to lead with confidence.
                 </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: confidently lead AI initiatives, evaluate tools, and prompt with precision.
+                </p>
               </div>
 
               <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
@@ -74,6 +77,9 @@ const ValueSection = () => {
                 </div>
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Leadership-level application and strategic decision-making for senior professionals.
+                </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: apply AI to strategic decisions, build team adoption plans, and brief your board.
                 </p>
               </div>
             </div>
@@ -105,6 +111,9 @@ const ValueSection = () => {
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Upskill entire teams with structured training and AI systems adoption.
                 </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: your team shares a common AI framework and you own a repeatable program you can deploy to every new hire.
+                </p>
               </div>
 
               <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
@@ -117,6 +126,9 @@ const ValueSection = () => {
                 </div>
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Leadership briefings and decision architecture for C-suite and senior executives.
+                </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: C-suite leaders speak the same AI language and make faster, better-informed decisions.
                 </p>
               </div>
             </div>
