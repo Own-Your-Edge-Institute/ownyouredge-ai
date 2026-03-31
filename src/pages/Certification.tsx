@@ -97,7 +97,7 @@ const Certification = () => (
             href="#"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3 text-sm font-medium hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500"
           >
-            Begin Certification →
+            Explore Certification →
           </a>
         </motion.div>
       </div>
