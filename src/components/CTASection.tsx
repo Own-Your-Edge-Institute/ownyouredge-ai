@@ -45,7 +45,7 @@ const CTASection = () => (
               transition={{ delay: 0.4 }}
               className="flex flex-col gap-3"
             >
-              <a href="#" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-6 rounded-2xl hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500">
+              <a href="/certification" className="group flex items-center justify-between bg-primary text-primary-foreground px-8 py-6 rounded-2xl hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500">
                 <div>
                   <p className="font-medium">Individual Certification</p>
                   <p className="text-xs opacity-60 mt-0.5">Standard + Executive Track</p>
