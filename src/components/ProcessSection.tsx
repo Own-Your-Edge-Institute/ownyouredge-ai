@@ -56,6 +56,21 @@ const ProcessSection = () => (
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="flex justify-center mt-12"
+      >
+        <a
+          href="#certify"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500"
+        >
+          Begin Certification →
+        </a>
+      </motion.div>
     </div>
   </section>
 );
