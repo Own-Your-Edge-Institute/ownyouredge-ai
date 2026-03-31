@@ -12,7 +12,7 @@ const ValueSection = () => {
         {/* Section intro with oversized number */}
         <div className="grid lg:grid-cols-12 gap-12 mb-24">
           <div className="lg:col-span-2">
-            <span className="text-8xl lg:text-[10rem] font-serif italic text-primary/10 leading-none">01</span>
+            <span className="text-8xl lg:text-[10rem] font-serif italic text-primary/20 leading-none">01</span>
           </div>
           <div className="lg:col-span-6 lg:col-start-4 flex flex-col justify-end">
             <motion.h2
