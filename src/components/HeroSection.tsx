@@ -105,11 +105,11 @@ const HeroSection = () => {
             transition={{ delay: 1.8, duration: 1 }}
             className="mt-10 flex items-center gap-4 sm:gap-6 text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-foreground/50"
           >
-            <span>500+ professionals certified</span>
+            <span>Trusted by Global Companies</span>
             <span className="w-px h-3 bg-foreground/20" />
-            <span>40+ enterprise organizations</span>
+            <span>Award Winning Producer</span>
             <span className="w-px h-3 bg-foreground/20" />
-            <span>Recognized on LinkedIn worldwide</span>
+            <span>UN Featured Speaker</span>
           </motion.div>
         </div>
       </motion.div>
