@@ -10,6 +10,7 @@ const testimonials = [
     quote: "Astrid led two panels focused on artificial intelligence, featuring, among others, a General Manager from Tesla. The discussions explored humanoid AI and Astrid's robot, Miku, generating significant interest and engagement from our audience. The sessions were dynamic, forward-looking, and sparked an active Q&A, reflecting the relevance and impact of the topic.",
     name: "Karin Hammar",
     title: "CEO SACC-USA",
+  },
 ];
 
 const TestimonialsSection = () => (
