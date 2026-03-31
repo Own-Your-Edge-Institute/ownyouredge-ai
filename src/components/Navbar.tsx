@@ -19,13 +19,17 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-10">
-          {["Programs", "Business", "About"].map((item) => (
+          {[
+            { label: "Programs", href: "#programs" },
+            { label: "Enterprise", href: "/enterprise" },
+            { label: "About", href: "#about" },
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors duration-500"
             >
-              {item}
+              {item.label}
             </a>
           ))}
           <a
@@ -50,8 +54,12 @@ const Navbar = () => {
             className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-5">
-              {["Programs", "Business", "About"].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setOpen(false)} className="text-sm text-foreground/70">{item}</a>
+              {[
+                { label: "Programs", href: "#programs" },
+                { label: "Enterprise", href: "/enterprise" },
+                { label: "About", href: "#about" },
+              ].map((item) => (
+                <a key={item.label} href={item.href} onClick={() => setOpen(false)} className="text-sm text-foreground/70">{item.label}</a>
               ))}
               <a href="#certify" onClick={() => setOpen(false)} className="inline-flex items-center justify-center bg-primary text-primary-foreground text-sm font-medium px-5 py-2.5 rounded-full">
                 Get Certified →
