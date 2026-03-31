@@ -50,39 +50,16 @@ const ValueSection = () => {
               Prove you can do more than talk about AI. Earn a credential that signals strategic capability — not just awareness.
             </p>
 
-            <div className="space-y-4">
-              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Track</span>
-                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Standard</h4>
-                  </div>
-                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
-                </div>
-                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
-                  Core AI fluency certification for professionals ready to lead with confidence.
-                </p>
-                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
-                  After certification: confidently lead AI initiatives, evaluate tools, and prompt with precision.
-                </p>
-              </div>
-
-              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Upgrade</span>
-                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Executive Track</h4>
-                  </div>
-                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
-                </div>
-                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
-                  Leadership-level application and strategic decision-making for senior professionals.
-                </p>
-                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
-                  After certification: apply AI to strategic decisions, build team adoption plans, and brief your board.
-                </p>
-              </div>
+            <div className="space-y-3 mb-8">
+              <p className="text-foreground/30 text-xs">Standard Track · Executive Track</p>
             </div>
+
+            <a
+              href="/certification"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500"
+            >
+              Learn more →
+            </a>
           </motion.div>
 
           {/* Lane 2: Enterprise Program */}
