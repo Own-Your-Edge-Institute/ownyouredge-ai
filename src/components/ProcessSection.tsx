@@ -4,7 +4,7 @@ const steps = [
   { title: "Choose your path", desc: "Individual or team. Standard track or Executive. You pick the level; we build from there." },
   { title: "Learn from a fellow CEO", desc: "Every module reflects real deployment experience across real companies, departments, and solutions." },
   { title: "Earn your credential", desc: "Pass the assessment. Receive your verified certification, ready to display on LinkedIn and share with hiring teams." },
-  { title: "Lead with proof", desc: "Your certification signals strategic capability before you say a word. Carry it for life-no renewal fees, ever." },
+  { title: "Empower your team", desc: "Your certification signals strategic capability before you say a word." },
 ];
 
 const ProcessSection = () => (
