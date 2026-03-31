@@ -78,6 +78,9 @@ const ValueSection = () => {
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Leadership-level application and strategic decision-making for senior professionals.
                 </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: apply AI to strategic decisions, build team adoption plans, and brief your board.
+                </p>
               </div>
             </div>
           </motion.div>
