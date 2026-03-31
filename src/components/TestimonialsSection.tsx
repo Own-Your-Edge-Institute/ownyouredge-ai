@@ -34,7 +34,7 @@ const TestimonialsSection = () => (
           </motion.div>
         ))}
       </div>
-      <p className="text-center text-xs text-foreground/30 mt-8">Real quotes from certified professionals.</p>
+      
     </div>
   </section>
 );
