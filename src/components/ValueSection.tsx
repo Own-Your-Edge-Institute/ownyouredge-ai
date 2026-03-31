@@ -127,6 +127,9 @@ const ValueSection = () => {
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Leadership briefings and decision architecture for C-suite and senior executives.
                 </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: C-suite leaders speak the same AI language and make faster, better-informed decisions.
+                </p>
               </div>
             </div>
           </motion.div>
