@@ -35,7 +35,7 @@ const CTASection = () => (
               transition={{ delay: 0.3 }}
               className="text-foreground/40 text-base leading-relaxed mb-10 max-w-md"
             >
-              Join the professionals and organizations building AI fluency that translates into real-world leadership.
+              Join the professionals and organizations mastering AI and transforming real-world leadership.
             </motion.p>
 
             <motion.div
