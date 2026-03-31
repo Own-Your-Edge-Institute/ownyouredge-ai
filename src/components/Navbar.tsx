@@ -15,7 +15,7 @@ const Navbar = () => {
     >
       <div className="px-6 lg:px-12 py-6 flex items-center justify-between">
         <a href="/">
-          <img src={logo} alt="Own Your Edge™ Institute" className="h-8 brightness-200" />
+          <img src={logo} alt="Own Your Edge™ Institute" className="h-14 brightness-200" />
         </a>
 
         <div className="hidden md:flex items-center gap-10">
