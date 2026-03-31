@@ -111,6 +111,9 @@ const ValueSection = () => {
                 <p className="text-foreground/30 text-xs leading-relaxed mt-2">
                   Upskill entire teams with structured training and AI systems adoption.
                 </p>
+                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
+                  After certification: your team shares a common AI framework and you own a repeatable program you can deploy to every new hire.
+                </p>
               </div>
 
               <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
