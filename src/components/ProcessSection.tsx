@@ -17,7 +17,7 @@ const ProcessSection = () => (
     <div className="max-w-[1400px] mx-auto relative z-10">
       <div className="grid lg:grid-cols-12 gap-12 mb-24">
         <div className="lg:col-span-2">
-          <span className="text-8xl lg:text-[10rem] font-serif italic text-primary/10 leading-none">02</span>
+          <span className="text-8xl lg:text-[10rem] font-serif italic text-primary/20 leading-none">02</span>
         </div>
         <div className="lg:col-span-6 lg:col-start-4 flex flex-col justify-end">
           <motion.h2
@@ -52,7 +52,7 @@ const ProcessSection = () => (
               <div className="h-px flex-1 bg-border/30 group-hover:bg-primary/30 transition-colors duration-700" />
             </div>
             <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors duration-500">{s.title}</h3>
-            <p className="text-sm text-foreground/35 leading-relaxed">{s.desc}</p>
+            <p className="text-sm text-foreground/50 leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
       </div>
