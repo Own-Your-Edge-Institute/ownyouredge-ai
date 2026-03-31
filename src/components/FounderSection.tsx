@@ -44,13 +44,13 @@ const FounderSection = () => (
         className="space-y-6 text-sm text-foreground/40 leading-relaxed text-left"
       >
         <p>
-          She's been a founder, a CMO, a technologist, and an analyst. She's never seen a skills gap move this fast — or cause this much quiet damage.
+          Astrid has spent her career building, advising, and mentoring companies across industries as varied as sports and media, automotive, fashion, healthcare, and beyond. For 17 years she co-founded and operated a multi-million dollar orthodontic practice in the competitive Washington DC market, building every function across PR, operations, marketing, consumer loyalty, philanthropy, professional development, and more.
         </p>
         <p>
-          After 7 companies, decades at the intersection of tech and business, and a front-row seat to how organizations actually deploy AI, she saw the same pattern everywhere: half-built programs, undertrained teams, and customer-facing systems that embarrassed the brands running them.
+          As an AI Strategist and Analyst, she built <span className="text-primary font-medium">Own Your Edge™</span> Institute to bring that hard-won operational knowledge to as many businesses as possible. After decades at the intersection of tech and business, she's had a front-row seat to how organizations actually deploy AI and she kept seeing the same pattern: half-built programs, undertrained teams failing to maximize opportunity, and customer-facing systems that embarrassed the brands running them.
         </p>
         <p>
-          Most AI training produces confident incompetence. <span className="text-primary font-medium">Own Your Edge™</span> exists because fluency without rigor isn't fluency. It's liability.
+          Most AI training produces confident incompetence. <span className="text-primary font-medium">Own Your Edge™</span> exists because fluency without rigor is a liability you cannot afford.
         </p>
       </motion.div>
     </div>
