@@ -52,7 +52,7 @@ const CTASection = () => (
                 </div>
                 <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
               </a>
-              <a href="#" className="group flex items-center justify-between rounded-2xl border border-primary/40 px-8 py-6 hover:border-primary/60 hover:bg-primary/5 transition-all duration-500">
+              <a href="/enterprise" className="group flex items-center justify-between rounded-2xl border border-primary/40 px-8 py-6 hover:border-primary/60 hover:bg-primary/5 transition-all duration-500">
                 <div>
                   <p className="font-medium">Enterprise Program</p>
                   <p className="text-xs text-primary mt-0.5">Team Program + Executive Layer + Strategic Advisory</p>

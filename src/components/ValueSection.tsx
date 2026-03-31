@@ -99,58 +99,16 @@ const ValueSection = () => {
               Scale AI readiness across your organization with structured training, measurement, and leadership alignment.
             </p>
 
-            <div className="space-y-4">
-              {/* Card 1: Team Program */}
-              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Program</span>
-                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Team Program</h4>
-                  </div>
-                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
-                </div>
-                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
-                  Upskill entire teams with structured training and AI systems adoption. Your org gets a repeatable certification framework you can deploy to every new hire, every cohort, every quarter.
-                </p>
-                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
-                  After certification: your team shares a common AI framework and a deployment system they can run internally at any scale.
-                </p>
-              </div>
-
-              {/* Card 2: Executive Layer */}
-              <div className="group rounded-xl border border-border/20 p-6 hover:bg-card/50 transition-colors duration-500">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">Add-on</span>
-                    <h4 className="text-lg font-serif mt-1 group-hover:text-primary transition-colors duration-500">Executive Layer</h4>
-                  </div>
-                  <a href="#certify" className="text-foreground/20 group-hover:text-primary transition-colors duration-500 text-lg">→</a>
-                </div>
-                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
-                  Leadership briefings and decision architecture for C-suite and senior executives. Every enterprise deployment scoped to your teams, your tools, your goals.
-                </p>
-                <p className="text-foreground/20 text-[11px] leading-relaxed mt-3 italic">
-                  After certification: C-suite leaders speak the same AI language and make faster, better-informed decisions.
-                </p>
-              </div>
-
-              {/* Card 3: Strategic Advisory */}
-              <div className="group rounded-xl border p-6 transition-colors duration-500 bg-[#7F77DD]/[0.06] border-[#7F77DD]/[0.35] hover:bg-[#7F77DD]/[0.10]">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="text-[9px] tracking-[0.3em] uppercase font-medium" style={{ color: '#7F77DD' }}>Retained Advisory</span>
-                    <div className="mt-2 mb-1">
-                      <span className="text-[10px] tracking-wide px-2.5 py-0.5 rounded-full font-medium bg-[#7F77DD]/10 text-[#A89EE0]">Priced separately</span>
-                    </div>
-                    <h4 className="text-lg font-serif mt-2" style={{ color: '#A89EE0' }}>Own Your Edge™ Strategic Advisory</h4>
-                  </div>
-                  <a href="#certify" className="text-lg transition-colors duration-500" style={{ color: '#7F77DD' }}>→</a>
-                </div>
-                <p className="text-foreground/30 text-xs leading-relaxed mt-2">
-                  Astrid works directly with your leadership team on a retained basis — quarterly or biannual sessions to keep your program current, your curriculum sharp, and your executives ahead of the curve as AI evolves. For organizations that want Astrid in the room.
-                </p>
-              </div>
+            <div className="space-y-3 mb-8">
+              <p className="text-foreground/30 text-xs">Team Program · Executive Layer · Strategic Advisory</p>
             </div>
+
+            <a
+              href="/enterprise"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500"
+            >
+              Learn more →
+            </a>
           </motion.div>
         </div>
       </div>
