@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -17,7 +18,39 @@ const programs = [
   },
 ];
 
-const Enterprise = () => (
+const Enterprise = () => {
+  const [form, setForm] = useState({ name: "", company: "", role: "", teamSize: "", challenge: "", website: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const updateField = (field: string, value: string) => setForm((prev) => ({ ...prev, [field]: value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/enterprise-inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong");
+      }
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || "Failed to submit. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const inputClass = "w-full bg-white/[0.04] border border-[#3C3489]/30 rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/25 focus:outline-none focus:border-[#7F77DD] focus:ring-1 focus:ring-[#7F77DD]/30 transition-colors";
+
+  return (
   <div className="min-h-screen bg-background text-foreground">
     <Navbar />
 
@@ -94,35 +127,139 @@ const Enterprise = () => (
       </div>
     </section>
 
-    {/* CTA */}
-    <section className="py-24 lg:py-32 px-6 lg:px-12">
-      <div className="max-w-[1400px] mx-auto text-center">
-        <motion.h2
+    {/* Contact Form */}
+    <section id="contact" className="py-24 lg:py-32 px-6 lg:px-12">
+      <div className="max-w-[600px] mx-auto">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl lg:text-5xl font-serif mb-6"
         >
-          Ready to get started?
-        </motion.h2>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-        >
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-8 py-3 text-sm font-medium text-primary hover:bg-primary/5 transition-all duration-500"
-          >
-            Schedule a conversation →
-          </a>
+          <h2 className="text-3xl lg:text-4xl font-serif mb-3 text-center">
+            Ready to get started?
+          </h2>
+          <p className="text-foreground/30 text-sm text-center mb-10">
+            Tell us about your team and we'll put together a custom proposal.
+          </p>
+
+          {submitted ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="text-center py-12"
+            >
+              <div className="w-16 h-16 rounded-full bg-[#3C3489]/20 flex items-center justify-center mx-auto mb-5 text-2xl">
+                ✓
+              </div>
+              <h3 className="font-serif text-xl mb-2">We'll be in touch</h3>
+              <p className="text-foreground/30 text-sm">
+                Thank you for your interest. We review every inquiry personally and will respond within 2 business days.
+              </p>
+            </motion.div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl text-sm">
+                  {error}
+                </div>
+              )}
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Name *</label>
+                  <input
+                    type="text"
+                    required
+                    value={form.name}
+                    onChange={(e) => updateField("name", e.target.value)}
+                    className={inputClass}
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Company *</label>
+                  <input
+                    type="text"
+                    required
+                    value={form.company}
+                    onChange={(e) => updateField("company", e.target.value)}
+                    className={inputClass}
+                    placeholder="Company name"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Role *</label>
+                  <input
+                    type="text"
+                    required
+                    value={form.role}
+                    onChange={(e) => updateField("role", e.target.value)}
+                    className={inputClass}
+                    placeholder="Your title"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Team Size *</label>
+                  <select
+                    required
+                    value={form.teamSize}
+                    onChange={(e) => updateField("teamSize", e.target.value)}
+                    className={`${inputClass} appearance-none`}
+                  >
+                    <option value="" disabled>Select size</option>
+                    <option value="5-25">5-25</option>
+                    <option value="25-100">25-100</option>
+                    <option value="100-500">100-500</option>
+                    <option value="500+">500+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">What are you trying to solve?</label>
+                <textarea
+                  value={form.challenge}
+                  onChange={(e) => updateField("challenge", e.target.value)}
+                  className={`${inputClass} min-h-[120px] resize-none`}
+                  placeholder="Tell us about your goals, timeline, or challenges..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full rounded-full bg-[#3C3489] hover:bg-[#7F77DD] disabled:opacity-50 text-white py-3.5 text-sm font-medium transition-colors duration-300"
+              >
+                {submitting ? "Sending..." : "Schedule a conversation"}
+              </button>
+
+              {/* Honeypot - hidden from humans, bots fill it */}
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <input
+                  type="text"
+                  name="website"
+                  value={form.website}
+                  onChange={(e) => updateField("website", e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              <p className="text-foreground/15 text-[11px] text-center">
+                We review every inquiry personally.
+              </p>
+            </form>
+          )}
         </motion.div>
       </div>
     </section>
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default Enterprise;
