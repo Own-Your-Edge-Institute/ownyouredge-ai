@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const FounderSection = () => (
-  <section className="py-32 lg:py-48 px-6 lg:px-12 bg-background">
+  <section id="about" className="py-32 lg:py-48 px-6 lg:px-12 bg-background">
     <div className="max-w-[720px] mx-auto text-center">
       <motion.span
         initial={{ opacity: 0, y: 20 }}
