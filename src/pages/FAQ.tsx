@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "What is my investment?",
-    a: "The Standard track is $1,495. That's a one-time payment for lifetime access, including any content updates as AI evolves. The Executive Track is available at a separate investment — contact us to discuss what's right for your role and organization.",
+    a: "The Standard track is $1,495. That's a one-time investment for lifetime access, including any content updates as AI evolves. The Executive Track is available at a separate investment, contact us to discuss what's right for your role and organization.",
   },
   {
     q: "When can I sign up?",
