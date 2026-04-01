@@ -94,10 +94,26 @@ const Certification = () => (
           transition={{ delay: 0.2 }}
         >
           <a
-            href="#"
+            href="https://learn.ownyouredge.ai"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3 text-sm font-medium hover:shadow-[0_0_40px_hsl(var(--primary)_/_0.3)] transition-all duration-500"
           >
             Explore Certification →
+          </a>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-8"
+        >
+          <a
+            href="/enterprise"
+            className="inline-flex items-center gap-2 text-sm text-foreground/50 hover:text-primary transition-colors duration-300"
+          >
+            Looking to certify your team? Explore Enterprise →
           </a>
         </motion.div>
       </div>

@@ -13,7 +13,7 @@ const Footer = () => (
         <div className="lg:col-span-2 lg:col-start-8">
           <p className="text-[10px] tracking-[0.25em] uppercase text-foreground/50 mb-4">Navigate</p>
           {[
-            { label: "Programs", href: "#programs" },
+            { label: "Individual", href: "/certification" },
             { label: "Enterprise", href: "/enterprise" },
             { label: "About", href: "#about" },
             { label: "FAQ", href: "/faq" },

@@ -20,7 +20,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-10">
           {[
-            { label: "Programs", href: "#programs" },
+            { label: "Individual", href: "/certification" },
             { label: "Enterprise", href: "/enterprise" },
             { label: "About", href: "#about" },
             { label: "FAQ", href: "/faq" },
@@ -56,7 +56,7 @@ const Navbar = () => {
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {[
-                { label: "Programs", href: "#programs" },
+                { label: "Individual", href: "/certification" },
                 { label: "Enterprise", href: "/enterprise" },
                 { label: "About", href: "#about" },
                 { label: "FAQ", href: "/faq" },
