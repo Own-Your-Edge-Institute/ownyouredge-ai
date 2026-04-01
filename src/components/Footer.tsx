@@ -12,8 +12,14 @@ const Footer = () => (
         </div>
         <div className="lg:col-span-2 lg:col-start-8">
           <p className="text-[10px] tracking-[0.25em] uppercase text-foreground/20 mb-4">Navigate</p>
-          {["Programs", "Business", "About", "Contact"].map((l) => (
-            <a key={l} href="#" className="block text-sm text-foreground/30 hover:text-foreground/70 transition-colors mb-2">{l}</a>
+          {[
+            { label: "Programs", href: "#programs" },
+            { label: "Enterprise", href: "/enterprise" },
+            { label: "About", href: "#about" },
+            { label: "FAQ", href: "/faq" },
+            { label: "Contact", href: "#" },
+          ].map((l) => (
+            <a key={l.label} href={l.href} className="block text-sm text-foreground/30 hover:text-foreground/70 transition-colors mb-2">{l.label}</a>
           ))}
         </div>
         <div className="lg:col-span-2">
