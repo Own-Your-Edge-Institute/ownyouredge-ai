@@ -49,7 +49,7 @@ const Certification = () => (
             transition={{ delay: 0.5 }}
             className="text-foreground/70 text-base lg:text-lg leading-relaxed max-w-xl"
           >
-            Earn a credential that signals strategic capability — not just awareness. Choose the track that fits your level.
+            Earn a credential that signals strategic capability. Choose the track that fits your level.
           </motion.p>
         </div>
       </div>
