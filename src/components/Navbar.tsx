@@ -22,7 +22,7 @@ const Navbar = () => {
           {[
             { label: "Individual", href: "/certification" },
             { label: "Enterprise", href: "/enterprise" },
-            { label: "About", href: "#about" },
+            { label: "About", href: "/#about" },
             { label: "FAQ", href: "/faq" },
           ].map((item) => (
             <a
@@ -58,7 +58,7 @@ const Navbar = () => {
               {[
                 { label: "Individual", href: "/certification" },
                 { label: "Enterprise", href: "/enterprise" },
-                { label: "About", href: "#about" },
+                { label: "About", href: "/#about" },
                 { label: "FAQ", href: "/faq" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setOpen(false)} className="text-sm text-foreground/70">{item.label}</a>
