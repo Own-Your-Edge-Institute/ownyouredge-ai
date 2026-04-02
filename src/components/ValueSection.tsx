@@ -46,12 +46,12 @@ const ValueSection = () => {
           >
             <span className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium">Lane 01</span>
             <h3 className="text-2xl lg:text-3xl font-serif mt-3 mb-2">Individual Certification</h3>
-            <p className="text-foreground/50 text-sm leading-relaxed mb-8">
+            <p className="text-foreground/70 text-sm leading-relaxed mb-8">
               Prove you can do more than talk about AI. Earn a credential that signals strategic capability — not just awareness.
             </p>
 
             <div className="space-y-3 mb-8">
-              <p className="text-foreground/40 text-xs">Standard Track · Executive Track</p>
+              <p className="text-foreground/60 text-xs">Standard Track · Executive Track</p>
             </div>
 
             <a
@@ -72,12 +72,12 @@ const ValueSection = () => {
           >
             <span className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium">Lane 02</span>
             <h3 className="text-2xl lg:text-3xl font-serif mt-3 mb-2">Enterprise Program</h3>
-            <p className="text-foreground/50 text-sm leading-relaxed mb-8">
+            <p className="text-foreground/70 text-sm leading-relaxed mb-8">
               Scale AI readiness across your organization with structured training, measurement, and leadership alignment.
             </p>
 
             <div className="space-y-3 mb-8">
-              <p className="text-foreground/40 text-xs">Team Program · Executive Layer · Strategic Advisory</p>
+              <p className="text-foreground/60 text-xs">Team Program · Executive Layer · Strategic Advisory</p>
             </div>
 
             <a

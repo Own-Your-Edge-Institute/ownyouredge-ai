@@ -50,7 +50,7 @@ const ProcessSection = () => (
               <div className="h-px flex-1 bg-border/30 group-hover:bg-primary/30 transition-colors duration-700" />
             </div>
             <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors duration-500">{s.title}</h3>
-            <p className="text-sm text-foreground/50 leading-relaxed">{s.desc}</p>
+            <p className="text-sm text-foreground/70 leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
       </div>

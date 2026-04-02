@@ -11,11 +11,11 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 1 }}
-      className="fixed top-0 left-0 right-0 z-50 mix-blend-difference"
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="px-6 lg:px-12 py-6 flex items-center justify-between">
+      <div className="px-6 lg:px-12 py-5 flex items-center justify-between bg-white/90 backdrop-blur-xl">
         <a href="/">
-          <img src={logo} alt="Own Your Edge™ Institute" className="h-14 brightness-200" />
+          <img src={logo} alt="Own Your Edge™ Institute" className="h-14" />
         </a>
 
         <div className="hidden md:flex items-center gap-10">
@@ -28,20 +28,20 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors duration-500"
+              className="text-[11px] font-medium tracking-[0.25em] uppercase text-foreground/60 hover:text-primary transition-colors duration-500"
             >
               {item.label}
             </a>
           ))}
           <a
             href="#certify"
-            className="text-[11px] font-medium tracking-[0.25em] uppercase text-white border border-white/20 px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-500"
+            className="text-[11px] font-medium tracking-[0.25em] uppercase text-white bg-[#3C3489] border border-[#3C3489] px-5 py-2 rounded-full hover:bg-[#7F77DD] hover:border-[#7F77DD] transition-all duration-500"
           >
             Get Certified
           </a>
         </div>
 
-        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>

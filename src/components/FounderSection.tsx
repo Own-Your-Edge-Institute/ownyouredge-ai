@@ -41,7 +41,7 @@ const FounderSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.45, duration: 0.8 }}
-        className="space-y-6 text-sm text-foreground/40 leading-relaxed text-left"
+        className="space-y-6 text-sm text-foreground/70 leading-relaxed text-left"
       >
         <p>
           Astrid has spent her career building, advising, and mentoring companies across industries as varied as sports and media, automotive, fashion, healthcare, and beyond. For 17 years she co-founded and operated a multi-million dollar orthodontic practice in the competitive Washington DC market, building every function across PR, operations, marketing, consumer loyalty, philanthropy, professional development, and more.

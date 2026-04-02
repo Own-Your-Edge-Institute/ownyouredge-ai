@@ -16,7 +16,7 @@ const MarqueeBanner = () => (
         <span
           key={i}
           className={`mx-4 text-sm tracking-widest uppercase ${
-            w === "•" ? "text-primary" : "text-foreground/40 font-light"
+            w === "•" ? "text-primary" : "text-foreground/70 font-light"
           }`}
         >
           {w}

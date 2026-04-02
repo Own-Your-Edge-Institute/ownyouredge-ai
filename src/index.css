@@ -75,3 +75,17 @@
     box-shadow: 0 0 0 1px hsl(262 50% 58% / 0.15), 0 0 40px -10px hsl(262 50% 58% / 0.2);
   }
 }
+
+/* Light theme for homepage */
+.theme-light {
+  --background: 0 0% 100%;
+  --foreground: 250 20% 12%;
+  --card: 250 10% 97%;
+  --card-foreground: 250 20% 12%;
+  --border: 250 10% 88%;
+  --muted: 250 10% 95%;
+  --muted-foreground: 250 8% 40%;
+  --secondary: 250 10% 95%;
+  --secondary-foreground: 250 20% 20%;
+  --input: 250 10% 88%;
+}

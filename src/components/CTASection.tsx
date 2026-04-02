@@ -33,7 +33,7 @@ const CTASection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-foreground/40 text-base leading-relaxed mb-10 max-w-md"
+              className="text-foreground/70 text-base leading-relaxed mb-10 max-w-md"
             >
               Join the professionals and organizations mastering AI and transforming real-world leadership.
             </motion.p>

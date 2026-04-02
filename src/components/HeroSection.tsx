@@ -33,13 +33,13 @@ const HeroSection = () => {
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => { mouseX.set(0.2); mouseY2.set(0.5); }}
-      className="relative h-[100vh] flex items-end overflow-hidden cursor-none"
+      className="relative min-h-[75vh] flex items-end overflow-hidden cursor-none"
     >
       {/* Background image */}
       <motion.div style={{ y: imageY }} className="absolute inset-0 -top-20">
         <img src={heroTexture} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent" />
       </motion.div>
 
       {/* Floating badge - mouse reveal */}
@@ -103,7 +103,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 1 }}
-            className="mt-10 flex items-center gap-4 sm:gap-6 text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-foreground/50"
+            className="mt-10 flex items-center gap-4 sm:gap-6 text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-foreground/70"
           >
             <span>Trusted by Global Companies</span>
             <span className="w-px h-3 bg-foreground/20" />
