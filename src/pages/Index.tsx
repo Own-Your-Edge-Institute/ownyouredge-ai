@@ -9,7 +9,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
-  <div className="min-h-screen theme-light bg-background text-foreground">
+  <div className="min-h-screen bg-background text-foreground">
     <Navbar />
     <HeroSection />
     <MarqueeBanner />

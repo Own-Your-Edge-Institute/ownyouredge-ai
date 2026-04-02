@@ -47,7 +47,7 @@ const Certification = () => (
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-foreground/40 text-base lg:text-lg leading-relaxed max-w-xl"
+            className="text-foreground/70 text-base lg:text-lg leading-relaxed max-w-xl"
           >
             Earn a credential that signals strategic capability — not just awareness. Choose the track that fits your level.
           </motion.p>
@@ -67,9 +67,9 @@ const Certification = () => (
             transition={{ delay: i * 0.12, duration: 0.7 }}
             className="group rounded-2xl border border-border/30 p-8 lg:p-10 hover:border-primary/20 transition-colors duration-700"
           >
-            <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">{t.label}</span>
+            <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/60 font-medium">{t.label}</span>
             <h3 className="text-2xl lg:text-3xl font-serif mt-2 mb-3 group-hover:text-primary transition-colors duration-500">{t.title}</h3>
-            <p className="text-foreground/40 text-sm leading-relaxed max-w-2xl">{t.desc}</p>
+            <p className="text-foreground/70 text-sm leading-relaxed max-w-2xl">{t.desc}</p>
             <p className="text-foreground/20 text-[11px] leading-relaxed mt-4 italic max-w-2xl">{t.outcome}</p>
           </motion.div>
         ))}
@@ -111,7 +111,7 @@ const Certification = () => (
         >
           <a
             href="/enterprise"
-            className="inline-flex items-center gap-2 text-sm text-foreground/50 hover:text-primary transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors duration-300"
           >
             Looking to certify your team? Explore Enterprise →
           </a>

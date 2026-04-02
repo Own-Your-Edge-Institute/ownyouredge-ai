@@ -48,7 +48,7 @@ const Enterprise = () => {
     }
   };
 
-  const inputClass = "w-full bg-white/[0.04] border border-[#3C3489]/30 rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/25 focus:outline-none focus:border-[#7F77DD] focus:ring-1 focus:ring-[#7F77DD]/30 transition-colors";
+  const inputClass = "w-full bg-foreground/[0.03] border border-foreground/15 rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-[#7F77DD] focus:ring-1 focus:ring-[#7F77DD]/30 transition-colors";
 
   return (
   <div className="min-h-screen bg-background text-foreground">
@@ -80,7 +80,7 @@ const Enterprise = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-foreground/40 text-base lg:text-lg leading-relaxed max-w-xl"
+            className="text-foreground/70 text-base lg:text-lg leading-relaxed max-w-xl"
           >
             Structured training, measurement, and leadership alignment — built around your teams, your tools, and your goals.
           </motion.p>
@@ -100,10 +100,10 @@ const Enterprise = () => {
             transition={{ delay: i * 0.12, duration: 0.7 }}
             className="group rounded-2xl border border-border/30 p-8 lg:p-10 hover:border-primary/20 transition-colors duration-700"
           >
-            <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/30 font-medium">{p.label}</span>
+            <span className="text-[9px] tracking-[0.3em] uppercase text-foreground/60 font-medium">{p.label}</span>
             <h3 className="text-2xl lg:text-3xl font-serif mt-2 mb-3 group-hover:text-primary transition-colors duration-500">{p.title}</h3>
-            <p className="text-foreground/40 text-sm leading-relaxed max-w-2xl">{p.desc}</p>
-            <p className="text-foreground/20 text-[11px] leading-relaxed mt-4 italic max-w-2xl">{p.outcome}</p>
+            <p className="text-foreground/70 text-sm leading-relaxed max-w-2xl">{p.desc}</p>
+            <p className="text-foreground/50 text-[11px] leading-relaxed mt-4 italic max-w-2xl">{p.outcome}</p>
           </motion.div>
         ))}
 
@@ -120,7 +120,7 @@ const Enterprise = () => {
             <span className="text-[10px] tracking-wide px-2.5 py-0.5 rounded-full font-medium bg-[#7F77DD]/10 text-[#A89EE0]">Priced separately</span>
           </div>
           <h3 className="text-2xl lg:text-3xl font-serif mt-2 mb-3" style={{ color: "#A89EE0" }}>Own Your Edge™ Strategic Advisory</h3>
-          <p className="text-foreground/30 text-sm leading-relaxed max-w-2xl">
+          <p className="text-foreground/60 text-sm leading-relaxed max-w-2xl">
             Astrid works directly with your leadership team on a retained basis — quarterly or biannual sessions to keep your program current, your curriculum sharp, and your executives ahead of the curve as AI evolves. For organizations that want Astrid in the room.
           </p>
         </motion.div>
@@ -138,7 +138,7 @@ const Enterprise = () => {
           <h2 className="text-3xl lg:text-4xl font-serif mb-3 text-center">
             Ready to get started?
           </h2>
-          <p className="text-foreground/30 text-sm text-center mb-10">
+          <p className="text-foreground/60 text-sm text-center mb-10">
             Tell us about your team and we'll put together a custom proposal.
           </p>
 
@@ -152,7 +152,7 @@ const Enterprise = () => {
                 ✓
               </div>
               <h3 className="font-serif text-xl mb-2">We'll be in touch</h3>
-              <p className="text-foreground/30 text-sm">
+              <p className="text-foreground/60 text-sm">
                 Thank you for your interest. We review every inquiry personally and will respond within 2 business days.
               </p>
             </motion.div>
@@ -166,7 +166,7 @@ const Enterprise = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Name *</label>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/60 font-medium mb-2">Name *</label>
                   <input
                     type="text"
                     required
@@ -177,7 +177,7 @@ const Enterprise = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Company *</label>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/60 font-medium mb-2">Company *</label>
                   <input
                     type="text"
                     required
@@ -191,7 +191,7 @@ const Enterprise = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Role *</label>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/60 font-medium mb-2">Role *</label>
                   <input
                     type="text"
                     required
@@ -202,7 +202,7 @@ const Enterprise = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">Team Size *</label>
+                  <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/60 font-medium mb-2">Team Size *</label>
                   <select
                     required
                     value={form.teamSize}
@@ -219,7 +219,7 @@ const Enterprise = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/30 font-medium mb-2">What are you trying to solve?</label>
+                <label className="block text-[11px] tracking-[0.15em] uppercase text-foreground/60 font-medium mb-2">What are you trying to solve?</label>
                 <textarea
                   value={form.challenge}
                   onChange={(e) => updateField("challenge", e.target.value)}
@@ -248,7 +248,7 @@ const Enterprise = () => {
                 />
               </div>
 
-              <p className="text-foreground/15 text-[11px] text-center">
+              <p className="text-foreground/50 text-[11px] text-center">
                 We review every inquiry personally.
               </p>
             </form>
