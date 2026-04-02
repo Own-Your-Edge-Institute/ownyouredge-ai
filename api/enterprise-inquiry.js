@@ -34,7 +34,7 @@ ${challenge || 'Not specified'}
       const resend = new Resend(resendKey);
       await resend.emails.send({
         from: "Enterprise Inquiries <speaking@astridsaitips.com>",
-        to: "speaking@astridsaitips.com",
+        to: "Learn@OwnYourEdge.ai",
         subject: `Enterprise Inquiry from ${name} at ${company}`,
         text: emailBody,
       });
